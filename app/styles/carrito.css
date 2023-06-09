@@ -1,0 +1,178 @@
+.carrito .titulo{
+    text-align:center;
+    color: #e99401;
+}
+.contenido{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:5rem;
+}
+.resumen{
+    background-color:#F9FAFB;
+    padding: 1rem 6rem;
+    align-items: flex-start;
+}
+
+.resumen h3{
+    text-align:center;
+    color:#e99401;
+}
+.resumen span{
+  margin-left: 8px;
+  font-weight: bold;
+}
+.resumen button{
+  padding: 1rem 2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    background-color: #e99401;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.resumen button:hover{
+    background-color: #d18500;
+}
+
+.sinResultados{
+  padding: 0 6rem;
+  font-size: 20px;
+}
+
+.sinResultados span{
+  font-weight: bold;
+  margin-left: 4px;
+  color: #d18500;
+}
+
+@media screen and (max-width: 768px){
+    .contenido{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/*******************  CARD PEDIDO  **********/
+.carritoPedido{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contenedorCardPedido{
+    display: flex;
+    gap: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding:1rem 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+.contenidoCardPedido{
+    width: 50%;
+}
+
+.contenedorCardPedido{
+    display: flex;
+    
+}
+.cardImagen{
+  height: 300px;  
+}
+
+.contenedorCardPedido select{
+    width: 100%;
+    padding:1rem 2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+}
+
+.contenidoCardPedido .disponible{
+    color: green;
+    font-weight: bold;
+}
+
+.contenidoCardPedido .precio{
+    font-weight: bold;
+}
+
+.contenidoCardPedido .precio span{
+    font-weight: bold;
+    color: #e99401;
+    margin-left: 5px;
+}
+
+/*BOTON*/
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(255, 65, 65);
+  margin-top: 1rem;
+}
+
+/* plus sign */
+.sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sign span {
+    font-weight: bolder;
+    color: white;
+  }
+  
+  .sign svg path {
+    fill: white;
+  }
+  /* text */
+  .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    transition-duration: .3s;
+  }
+  /* hover effect on button width */
+  .Btn:hover {
+    width: 100%;
+    border-radius: 40px;
+    transition-duration: .3s;
+  }
+  
+  .Btn:hover .sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 20px;
+  }
+  /* hover effect button's text */
+  .Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+  }
+  /* button click effect*/
+  .Btn:active {
+    transform: translate(2px ,2px);
+  }

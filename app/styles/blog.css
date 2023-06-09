@@ -1,0 +1,146 @@
+.contenedorBlog{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+
+.post{
+    border-radius: 15px;
+    position: relative;
+    display: inline-block;
+}
+.titulo{
+    color:#D88506;
+}
+
+img {
+    object-fit: cover;
+    opacity: 0.9;
+    transition: opacity .2s ease-out;
+}
+
+.post:hover{
+    backdrop-filter: brightness(40%);
+}
+.post:hover .contenedorData{
+    opacity: 1;
+    transition: opacity .5s .1s ease-in;
+}
+
+
+.post:hover .contenidoPost{
+    top:22rem;
+}
+
+.post img{
+    height: 450px;
+    border-radius: 15px;
+}
+
+.post h2{
+    font-size:20px;
+    font-weight: bold;
+}
+
+.contenedorData{
+    opacity: 0;
+    margin: 0;
+}
+.contenedorData p{
+    margin: 0;
+    font-size: 16px;
+}
+
+.contenidoPost{
+    position: absolute;
+    top: 36rem;
+    padding: 0px 2rem;
+    transition-duration:  500ms;
+    color: white;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.contenidoPost h2{
+    margin: 0;
+}
+
+.contenido{
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    display:-webkit-box; 
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:6; 
+    font-size: 14px;
+    line-height: 15px; 
+}
+
+.enlace{    
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: #D88506;;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.enlace span{
+    margin-left:1rem;
+    display: flex;
+    height: 30px;
+    align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .contenedorBlog{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 644px) {
+    .contenedorBlog{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/*********************      BLOG  ************************/
+.blog{
+    width: 80%;
+    margin: auto;
+}
+
+.blog .titulo{
+    color: #D88506;
+}
+
+.blog .imagen{
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.blog .actualizacion{
+    color: #D88506;
+    width: 70%;
+    margin: 1rem auto;
+}
+
+.blog .contenido2{
+    font-size: 22px;
+    white-space: pre-wrap;
+    color: black !important;
+    margin: 2rem auto;
+}
+
+@media screen and (min-width: 1024px){
+    .blog .contenido2{
+        width: 70%;
+    } 
+}
+
+
+
